@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>slide demo</title>
+  <link rel="stylesheet" href="css/mystyle2.css">
+
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+</head>
+
+<script>
+ $(document).ready(function()
+{
+    var slider_width = $('.opskriftSlider').width();//get width automaticly
+  $('#opskriftSlider-button').click(function() {
+    if($(this).css("margin-left") == slider_width+"px" && !$(this).is(':animated'))
+    {
+        $('.opskriftSlider,#opskriftSlider-button').animate({"margin-left": '-='+slider_width});
+    }
+    else
+    {
+        if(!$(this).is(':animated'))//perevent double click to double margin
+        {
+            $('.opskriftSlider,#opskriftSlider-button').animate({"margin-left": '+='+slider_width});
+        }
+    }
+
+
+  });
+ });
+
+
+$(document).ready(function()
+{
+    var slider_width = $('.konkurrenceSlider').width();//get width automaticly
+  $('#konkurrenceSlider-button').click(function() {
+    if($(this).css("margin-left") == slider_width+"px" && !$(this).is(':animated'))
+    {
+        $('.konkurrenceSlider,#konkurrenceSlider-button').animate({"margin-left": '-='+slider_width});
+    }
+    else
+    {
+        if(!$(this).is(':animated'))//perevent double click to double margin
+        {
+            $('.konkurrenceSlider,#konkurrenceSlider-button').animate({"margin-left": '+='+slider_width});
+        }
+    }
+
+
+  });
+ }); 
+
+ $(document).ready(function()
+{
+    var slider_width = $('.nyhedSlider').width();//get width automaticly
+  $('#nyhedSlider-button').click(function() {
+    if($(this).css("margin-left") == slider_width+"px" && !$(this).is(':animated'))
+    {
+        $('.nyhedSlider,#nyhedSlider-button').animate({"margin-left": '-='+slider_width});
+    }
+    else
+    {
+        if(!$(this).is(':animated'))//perevent double click to double margin
+        {
+            $('.nyhedSlider,#nyhedSlider-button').animate({"margin-left": '+='+slider_width});
+        }
+    }
+
+
+  });
+ });     
+</script>
+<body>
+<div class="konkurrenceSlider"><h4 class="overskrift4">Konkurrence:</h4><p class="sliderText">Vind 2 billetter til Hansi Hinterseer i Danmark eller Tyskland!  Der er ingen grund til, at du skal lade dig begrænse af din alder.</p><form method="post" name="contact-form" class="contact-form">
+      <ul>
+        <li>
+          <h3 class="overskrift2">Udfyld Register for the launch</h3>
+        </li>
+        <li>
+          <label class="inputLabel" for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Please put your name here" required>
+        </li>
+        <li>
+            <label class="inputLabel" for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="Please put your email here" required>
+        </li>
+        <li>
+            <label class="inputLabel" for="tel">Telephone</label>
+            <input type="tel" name="tel" id="tel" placeholder="Please put your telephonenumber here 80808080" required>
+        </li>
+        <li>
+            <input type="submit" value="Sign up">
+        </li>
+
+    </form>
+  </div>
+ 
+  
+ 
+
+
+  <div class="nyhedSlider">
+    <h4 class="overskrift4">Nyheder</h4>
+    <p class="sliderText">Der er ingen grund til, at du skal lade dig begrænse af din alder. Med Cekura safemate er hjælpen aldrig længere væk end et tryk på en knap. Alle skal kunne føle sig trygge i deres eget hjem og have mulighed for at bevæge sig rundt, som de ønsker og har helbred til.</p>
+  </div>
+ 
+ <div id="konkurrenceSlider-button">
+    <h3 class="overskrift3">Konkurrence</h3>
+    <p></p>
+  </div>
+
+  <div id="nyhedSlider-button">
+    <h3 class="overskrift3">Nyheder</h3>
+  </div>
+
+  <div class="opskriftSlider">
+    <h4 class="overskrift4">Opskrift:</h4>
+    <p class="sliderText">Der er ingen grund til, at du skal lade dig begrænse af din alder. Med Cekura safemate er hjælpen aldrig længere væk end et tryk på en knap. Alle skal kunne føle sig trygge i deres eget hjem og have mulighed for at bevæge sig rundt, som de ønsker og har helbred til.</p>
+  </div>
+ 
+  <div id="opskriftSlider-button">
+    <h3 class="overskrift3">Opskrift</h3>
+  </div>
+
+
+</body>
+
+</html>
